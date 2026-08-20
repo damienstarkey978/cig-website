@@ -629,4 +629,8 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
   .form-nav .btn { flex: 1; }
   .review-item { flex-direction: column; }
   .review-item dd { text-align: left; }
+
+  .footer-brand-logo { gap: 8px; flex-wrap: wrap; }
+  .footer-icon { height: 32px; }
+  .footer-wordmark { height: 18px; }
 }
