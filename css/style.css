@@ -213,6 +213,7 @@ img { max-width: 100%; display: block; }
 
 /* ===== Sections generic ===== */
 .section { padding: 100px 0; }
+.section-alt { background: var(--gray-100); }
 .section-eyebrow {
   font-family: var(--font-display);
   font-weight: 700;
