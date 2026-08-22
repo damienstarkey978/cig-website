@@ -1,0 +1,23 @@
+# Custom Intelligence Group
+
+> Custom Intelligence Group (CIG) builds custom AI products for companies across every industry — automations, AI employees, and custom dashboards tailored to how each business actually runs, not generic AI tools or templates.
+
+CIG serves home services, construction, real estate, healthcare, legal, retail & e-commerce, hospitality, professional services, manufacturing, finance, logistics, nonprofit, and other industries. Every engagement starts by learning the client's operations before recommending a solution.
+
+## Services
+- Automations: Replacing repetitive, manual, error-prone workflows (quoting, scheduling, follow-ups, data entry, reporting) with automations that run in the background.
+- AI Employees: Purpose-built AI agents that answer customers, qualify leads, process documents, and manage inboxes around the clock.
+- Custom Dashboards: Centralized, real-time dashboards built from a business's own data so decisions aren't guesses.
+
+## Process
+1. Discover — a short guided onboarding to learn the business, its pain points, and its current AI familiarity.
+2. Diagnose — analyze workflows to find where automation, an AI employee, or a dashboard will move the needle fastest.
+3. Design & Build — a custom solution built specifically around the client's systems, data, and team.
+4. Deploy & Support — integration, team training, and ongoing optimization.
+
+## Pages
+- [Home](https://customintelligencegroup.com/): Services, process, industries served, FAQ, and client onboarding form.
+
+## Contact
+- Start an AI assessment: https://customintelligencegroup.com/#onboarding
+- Email: hello@customintelligencegroup.com
