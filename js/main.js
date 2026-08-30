@@ -231,6 +231,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.form-progress').style.display = 'none';
         stepsLabel.style.display = 'none';
         formSuccess.classList.add('show');
+        if (window.fbq) { fbq('track', 'Lead'); }
       })
       .catch(function () {
         // Fallback: let the browser submit the form natively to thank-you.html
