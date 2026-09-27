@@ -27,14 +27,109 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://customintelligencegroup.com/#organization",
+  "name": "Custom Intelligence Group",
+  "alternateName": "CIG",
+  "url": "https://customintelligencegroup.com/",
+  "email": "hello@customintelligencegroup.com",
+  "telephone": "+1-904-664-7032",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6005 Powers Ave #210",
+    "addressLocality": "Jacksonville",
+    "addressRegion": "FL",
+    "postalCode": "32217",
+    "addressCountry": "US"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://customintelligencegroup.com/#localbusiness",
+  "name": "Custom Intelligence Group",
+  "url": "https://customintelligencegroup.com/",
+  "description": "Custom Intelligence Group builds practical custom AI automations, AI employees and agents, and operational dashboards for businesses in Jacksonville and Northeast Florida.",
+  "telephone": "+1-904-664-7032",
+  "email": "hello@customintelligencegroup.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6005 Powers Ave #210",
+    "addressLocality": "Jacksonville",
+    "addressRegion": "FL",
+    "postalCode": "32217",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Jacksonville"
+    },
+    {
+      "@type": "City",
+      "name": "Ponte Vedra Beach"
+    },
+    {
+      "@type": "City",
+      "name": "St. Augustine"
+    },
+    {
+      "@type": "City",
+      "name": "Orange Park"
+    },
+    {
+      "@type": "City",
+      "name": "Fleming Island"
+    },
+    {
+      "@type": "City",
+      "name": "Atlantic Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Neptune Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Jacksonville Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Fernandina Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Yulee"
+    },
+    {
+      "@type": "City",
+      "name": "Green Cove Springs"
+    },
+    {
+      "@type": "City",
+      "name": "Middleburg"
+    },
+    {
+      "@type": "City",
+      "name": "Palm Coast"
+    }
+  ],
+  "parentOrganization": {
+    "@id": "https://customintelligencegroup.com/#organization"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "Custom Business Intelligence Dashboards",
   "name": "Custom Dashboards",
   "description": "Custom dashboards that unify a client's business data into one real-time view, replacing scattered spreadsheets and disconnected tools.",
   "provider": {
-    "@type": "ProfessionalService",
-    "name": "Custom Intelligence Group",
-    "url": "https://customintelligencegroup.com/"
+    "@id": "https://customintelligencegroup.com/#localbusiness"
   },
   "areaServed": "US"
 }
@@ -47,6 +142,47 @@
     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://customintelligencegroup.com/"},
     {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://customintelligencegroup.com/#services"},
     {"@type": "ListItem", "position": 3, "name": "Custom Dashboards", "item": "https://customintelligencegroup.com/services/custom-dashboards/"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://customintelligencegroup.com/services/custom-dashboards/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What data sources can you connect?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most business tools — CRMs, accounting software, scheduling platforms, spreadsheets, and industry-specific systems. If your data lives somewhere with a way to access it, we can typically pull it into your dashboard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a data or IT team to maintain it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We build dashboards to run on their own once they're live, and we stay on to handle updates and adjustments as your business or data sources change."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can different people see different views?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We can build role-based views so an owner, a manager, and a frontline team member each see the information that's relevant to them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a dashboard build take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on how many systems need to be connected and how complex the reporting logic is. After your onboarding form, we'll scope your specific project and give you a clear timeline."
+      }
+    }
   ]
 }
 </script>
@@ -211,11 +347,15 @@ src="https://www.facebook.com/tr?id=1786237569210028&ev=PageView&noscript=1"
       <a href="../../index.html#services">Services</a>
       <a href="../../index.html#process">Process</a>
       <a href="../../index.html#industries">Industries</a>
+      <a href="../../jacksonville-ai-automation/">Jacksonville</a>
+      <a href="../../index.html#faq">FAQ</a>
       <a href="../../index.html#onboarding">Get Started</a>
     </div>
-    <div class="footer-contact">
+    <address class="footer-contact">
+      <a href="tel:+19046647032">904-664-7032</a>
       <a href="mailto:hello@customintelligencegroup.com">hello@customintelligencegroup.com</a>
-    </div>
+      <span>6005 Powers Ave #210<br>Jacksonville, FL 32217</span>
+    </address>
   </div>
   <div class="container footer-bottom">
     <p>&copy; <span id="year"></span> Custom Intelligence Group. All rights reserved.</p>

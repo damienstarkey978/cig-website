@@ -27,14 +27,109 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://customintelligencegroup.com/#organization",
+  "name": "Custom Intelligence Group",
+  "alternateName": "CIG",
+  "url": "https://customintelligencegroup.com/",
+  "email": "hello@customintelligencegroup.com",
+  "telephone": "+1-904-664-7032",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6005 Powers Ave #210",
+    "addressLocality": "Jacksonville",
+    "addressRegion": "FL",
+    "postalCode": "32217",
+    "addressCountry": "US"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://customintelligencegroup.com/#localbusiness",
+  "name": "Custom Intelligence Group",
+  "url": "https://customintelligencegroup.com/",
+  "description": "Custom Intelligence Group builds practical custom AI automations, AI employees and agents, and operational dashboards for businesses in Jacksonville and Northeast Florida.",
+  "telephone": "+1-904-664-7032",
+  "email": "hello@customintelligencegroup.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6005 Powers Ave #210",
+    "addressLocality": "Jacksonville",
+    "addressRegion": "FL",
+    "postalCode": "32217",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Jacksonville"
+    },
+    {
+      "@type": "City",
+      "name": "Ponte Vedra Beach"
+    },
+    {
+      "@type": "City",
+      "name": "St. Augustine"
+    },
+    {
+      "@type": "City",
+      "name": "Orange Park"
+    },
+    {
+      "@type": "City",
+      "name": "Fleming Island"
+    },
+    {
+      "@type": "City",
+      "name": "Atlantic Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Neptune Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Jacksonville Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Fernandina Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Yulee"
+    },
+    {
+      "@type": "City",
+      "name": "Green Cove Springs"
+    },
+    {
+      "@type": "City",
+      "name": "Middleburg"
+    },
+    {
+      "@type": "City",
+      "name": "Palm Coast"
+    }
+  ],
+  "parentOrganization": {
+    "@id": "https://customintelligencegroup.com/#organization"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "AI Automation for Home Service Businesses",
   "name": "AI for Home Services",
   "description": "AI automation, AI employees, and custom dashboards built for HVAC, plumbing, electrical, and other home service companies.",
   "provider": {
-    "@type": "ProfessionalService",
-    "name": "Custom Intelligence Group",
-    "url": "https://customintelligencegroup.com/"
+    "@id": "https://customintelligencegroup.com/#localbusiness"
   },
   "areaServed": "US",
   "audience": {
@@ -51,6 +146,47 @@
     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://customintelligencegroup.com/"},
     {"@type": "ListItem", "position": 2, "name": "Industries", "item": "https://customintelligencegroup.com/#industries"},
     {"@type": "ListItem", "position": 3, "name": "Home Services", "item": "https://customintelligencegroup.com/industries/home-services/"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://customintelligencegroup.com/industries/home-services/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will this work with my field service software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most cases, yes. We build around whatever scheduling, dispatch, or field service software you already use, rather than asking you to switch tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can an AI employee actually book a job?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — when it's connected to your scheduling system, an AI employee can check availability, book the appointment, and send confirmations, all without a human touching it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What about emergency or after-hours calls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We can design escalation rules so urgent calls get routed to an on-call technician immediately, while routine requests get handled or scheduled automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I have multiple crews across different service areas. Does that matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — we scope every build around your actual operation, including multiple crews, service areas, and scheduling constraints."
+      }
+    }
   ]
 }
 </script>
@@ -214,11 +350,15 @@ src="https://www.facebook.com/tr?id=1786237569210028&ev=PageView&noscript=1"
       <a href="../../index.html#services">Services</a>
       <a href="../../index.html#process">Process</a>
       <a href="../../index.html#industries">Industries</a>
+      <a href="../../jacksonville-ai-automation/">Jacksonville</a>
+      <a href="../../index.html#faq">FAQ</a>
       <a href="../../index.html#onboarding">Get Started</a>
     </div>
-    <div class="footer-contact">
+    <address class="footer-contact">
+      <a href="tel:+19046647032">904-664-7032</a>
       <a href="mailto:hello@customintelligencegroup.com">hello@customintelligencegroup.com</a>
-    </div>
+      <span>6005 Powers Ave #210<br>Jacksonville, FL 32217</span>
+    </address>
   </div>
   <div class="container footer-bottom">
     <p>&copy; <span id="year"></span> Custom Intelligence Group. All rights reserved.</p>

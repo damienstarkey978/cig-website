@@ -27,14 +27,109 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://customintelligencegroup.com/#organization",
+  "name": "Custom Intelligence Group",
+  "alternateName": "CIG",
+  "url": "https://customintelligencegroup.com/",
+  "email": "hello@customintelligencegroup.com",
+  "telephone": "+1-904-664-7032",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6005 Powers Ave #210",
+    "addressLocality": "Jacksonville",
+    "addressRegion": "FL",
+    "postalCode": "32217",
+    "addressCountry": "US"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://customintelligencegroup.com/#localbusiness",
+  "name": "Custom Intelligence Group",
+  "url": "https://customintelligencegroup.com/",
+  "description": "Custom Intelligence Group builds practical custom AI automations, AI employees and agents, and operational dashboards for businesses in Jacksonville and Northeast Florida.",
+  "telephone": "+1-904-664-7032",
+  "email": "hello@customintelligencegroup.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6005 Powers Ave #210",
+    "addressLocality": "Jacksonville",
+    "addressRegion": "FL",
+    "postalCode": "32217",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Jacksonville"
+    },
+    {
+      "@type": "City",
+      "name": "Ponte Vedra Beach"
+    },
+    {
+      "@type": "City",
+      "name": "St. Augustine"
+    },
+    {
+      "@type": "City",
+      "name": "Orange Park"
+    },
+    {
+      "@type": "City",
+      "name": "Fleming Island"
+    },
+    {
+      "@type": "City",
+      "name": "Atlantic Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Neptune Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Jacksonville Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Fernandina Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Yulee"
+    },
+    {
+      "@type": "City",
+      "name": "Green Cove Springs"
+    },
+    {
+      "@type": "City",
+      "name": "Middleburg"
+    },
+    {
+      "@type": "City",
+      "name": "Palm Coast"
+    }
+  ],
+  "parentOrganization": {
+    "@id": "https://customintelligencegroup.com/#organization"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "AI Automation for Real Estate",
   "name": "AI for Real Estate",
   "description": "AI automation, AI employees, and custom dashboards built for real estate agents, teams, and brokerages.",
   "provider": {
-    "@type": "ProfessionalService",
-    "name": "Custom Intelligence Group",
-    "url": "https://customintelligencegroup.com/"
+    "@id": "https://customintelligencegroup.com/#localbusiness"
   },
   "areaServed": "US",
   "audience": {
@@ -51,6 +146,47 @@
     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://customintelligencegroup.com/"},
     {"@type": "ListItem", "position": 2, "name": "Industries", "item": "https://customintelligencegroup.com/#industries"},
     {"@type": "ListItem", "position": 3, "name": "Real Estate", "item": "https://customintelligencegroup.com/industries/real-estate/"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://customintelligencegroup.com/industries/real-estate/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will this work with my CRM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most cases, yes. We build around whatever real estate CRM or transaction software you already use, rather than asking your team to switch tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can an AI employee actually respond to new leads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — connected to your lead source and CRM, an AI employee can respond within moments, ask qualifying questions, and get a serious lead onto an agent's calendar automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this work for teams with multiple agents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We can build lead routing logic around your team's structure — by agent, by area, by round robin, or by whatever rules your team already follows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get visibility across my whole brokerage, not just one team?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — dashboards can be scoped at the individual agent, team, or brokerage level, depending on who needs to see what."
+      }
+    }
   ]
 }
 </script>
@@ -214,11 +350,15 @@ src="https://www.facebook.com/tr?id=1786237569210028&ev=PageView&noscript=1"
       <a href="../../index.html#services">Services</a>
       <a href="../../index.html#process">Process</a>
       <a href="../../index.html#industries">Industries</a>
+      <a href="../../jacksonville-ai-automation/">Jacksonville</a>
+      <a href="../../index.html#faq">FAQ</a>
       <a href="../../index.html#onboarding">Get Started</a>
     </div>
-    <div class="footer-contact">
+    <address class="footer-contact">
+      <a href="tel:+19046647032">904-664-7032</a>
       <a href="mailto:hello@customintelligencegroup.com">hello@customintelligencegroup.com</a>
-    </div>
+      <span>6005 Powers Ave #210<br>Jacksonville, FL 32217</span>
+    </address>
   </div>
   <div class="container footer-bottom">
     <p>&copy; <span id="year"></span> Custom Intelligence Group. All rights reserved.</p>
