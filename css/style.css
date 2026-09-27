@@ -321,6 +321,7 @@ img { max-width: 100%; display: block; }
 .industry-chips a:hover { color: var(--blue-accent); }
 
 .page-copy { max-width: 760px; }
+.page-copy h2 { font-size: clamp(1.45rem, 2.6vw, 2.05rem); max-width: 22em; }
 .page-copy p { font-size: 1.05rem; }
 .page-copy p:last-child { margin-bottom: 0; }
 .page-copy a,
