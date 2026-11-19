@@ -338,7 +338,7 @@ img { max-width: 100%; display: block; }
 .local-note { margin-top: 28px; max-width: 640px; }
 
 /* ===== Onboarding form ===== */
-.onboarding { background: var(--gray-100); }
+.onboarding { background: var(--gray-100); scroll-margin-top: 36px; }
 .onboarding-inner {
   display: grid;
   grid-template-columns: 0.85fr 1.3fr;

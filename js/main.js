@@ -89,7 +89,8 @@ document.addEventListener('DOMContentLoaded', function () {
     industrySelect.addEventListener('change', updateSoftwareHint);
   }
 
-  function showStep(n) {
+  function showStep(n, options) {
+    var shouldScroll = !options || options.scroll !== false;
     steps.forEach(function (step) {
       step.classList.toggle('active', parseInt(step.getAttribute('data-step'), 10) === n);
     });
@@ -107,7 +108,11 @@ document.addEventListener('DOMContentLoaded', function () {
       submitBtn.style.display = 'none';
     }
     clearError();
-    window.scrollTo({ top: form.closest('.form-card').offsetTop - 110, behavior: 'smooth' });
+    // Step changes should keep the form in view. The first paint must not:
+    // scrolling here on load is what dropped bare-URL visits onto the form.
+    if (shouldScroll) {
+      window.scrollTo({ top: form.closest('.form-card').offsetTop - 110, behavior: 'smooth' });
+    }
   }
 
   function clearError() {
@@ -241,5 +246,24 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 
-  showStep(currentStep);
+  // Paint step 1 in place. A normal visit (no hash) stays at the hero.
+  showStep(currentStep, { scroll: false });
+
+  // #onboarding is the deep link used on Facebook and Google Business Profile.
+  // Anchor navigation already scrolls there; this repeats the jump after layout
+  // (and again when images finish) so the intro above the form is what's on screen.
+  // Instant, not smooth: a long smooth scroll from the hero can be cancelled
+  // mid-page when fonts load, which is the same "landed on the form" bug.
+  function landOnOnboardingIfRequested() {
+    if (window.location.hash !== '#onboarding') return;
+    var section = document.getElementById('onboarding');
+    if (!section) return;
+    var root = document.documentElement;
+    var previous = root.style.scrollBehavior;
+    root.style.scrollBehavior = 'auto';
+    section.scrollIntoView({ block: 'start' });
+    root.style.scrollBehavior = previous;
+  }
+  landOnOnboardingIfRequested();
+  window.addEventListener('load', landOnOnboardingIfRequested);
 });
