@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
     industrySelect.addEventListener('change', updateSoftwareHint);
   }
 
-  function showStep(n) {
+  function showStep(n, shouldScroll) {
     steps.forEach(function (step) {
       step.classList.toggle('active', parseInt(step.getAttribute('data-step'), 10) === n);
     });
@@ -107,7 +107,18 @@ document.addEventListener('DOMContentLoaded', function () {
       submitBtn.style.display = 'none';
     }
     clearError();
-    window.scrollTo({ top: form.closest('.form-card').offsetTop - 110, behavior: 'smooth' });
+    // Scrolling here used to run on the initial call too, which sent every
+    // visit — including a bare URL with no hash — straight to the form.
+    if (shouldScroll) scrollToFormCard();
+  }
+
+  function scrollToFormCard() {
+    var card = form.closest('.form-card');
+    if (!card) return;
+    var header = document.getElementById('siteHeader');
+    var offset = (header ? header.offsetHeight : 0) + 12;
+    var top = card.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
   }
 
   function clearError() {
@@ -154,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       if (!stepValid) {
         currentStep = i;
-        showStep(currentStep);
+        showStep(currentStep, true);
         validateStep(currentStep);
         return false;
       }
@@ -166,14 +177,14 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!validateStep(currentStep)) return;
     if (currentStep < totalSteps) {
       currentStep++;
-      showStep(currentStep);
+      showStep(currentStep, true);
     }
   });
 
   prevBtn.addEventListener('click', function () {
     if (currentStep > 1) {
       currentStep--;
-      showStep(currentStep);
+      showStep(currentStep, true);
     }
   });
 
@@ -241,5 +252,33 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 
+  // Initial render only. Do not scroll — a fresh visit to / must stay on the hero.
+  // #onboarding is a real fragment target (scroll-margin clears the sticky header),
+  // so ads, Facebook, and Google Business links still open on the form.
   showStep(currentStep);
+
+  if (window.location.hash === '#onboarding') {
+    var root = document.documentElement;
+    root.style.scrollBehavior = 'auto';
+    var alignOnboarding = function () {
+      var target = document.getElementById('onboarding');
+      if (!target) return;
+      var header = document.getElementById('siteHeader');
+      var offset = (header ? header.offsetHeight : 0) + 12;
+      var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo(0, Math.max(0, top));
+    };
+    var pending = 1;
+    var finished = function () {
+      alignOnboarding();
+      pending -= 1;
+      if (pending <= 0) root.style.scrollBehavior = '';
+    };
+    alignOnboarding();
+    window.addEventListener('load', finished);
+    if (document.fonts && document.fonts.ready) {
+      pending += 1;
+      document.fonts.ready.then(finished);
+    }
+  }
 });
